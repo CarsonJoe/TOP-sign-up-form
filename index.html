@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        
+        function createAccount() {
+            var pass = document.getElementById("password")
+            var pass2 = document.getElementById("conf_password")
+            if(pass.value === pass2.value) {
+                console.log('success')
+            } else {
+                pass.setCustomValidity("Invalid field.")
+                pass2.setCustomValidity("Invalid field.")
+                document.getElementById('error').innerText="* Passwords do not match"
+            }
+        }
+        </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-container">
+            <div class="header">
+                <svg style="width:130px; scale: .4;">
+                    <mask id="hole1">
+                        <rect width="100%" height="100%" fill="white"></rect>
+                        <circle r="45" cx="60" cy="50" fill="black"></circle>
+                    </mask>
+
+                    <mask id="hole2">
+                        <rect width="100%" height="100%" fill="white"></rect>
+                        <circle r="45" cx="90" cy="80" fill="black"></circle>
+                    </mask>
+                    <circle r="50" cx="50" cy="50" mask="url(#hole1)" fill="white"></circle>
+                    <circle r="50" cx="80" cy="80" mask="url(#hole2)" fill="white"></circle>
+                    <path
+                        d="M47 29.5C53 13.9611 49 0.5 49 0.5C49 0.5 40 9.61848 28 14.5C15 19.7883 0 19 0 19C0 19 12 23.2905 23 22C35 20.5922 42 15.5 42 15.5C42 15.5 42.5 26 35.5 39C28.5 52 18 58 18 58C18 58 38.5 51.5135 47 29.5Z"
+                        fill="white" mask="url(#arrow)" transform="translate(78 85)" id="Arrowtip"></path>
+                </svg>
+                <h1>Carson Gragg</h1>
+            </div>
+            <div class="credit"><p>Photo by Muppy Gragg - Chromatography</p></div>
+        </div>
+        <div class="right-container">
+            <div class="heading">
+                <h3>I know that this isn't actually a real sign up form! But I know you still want to sign up anyways... </h3>
+                <h3>So do it!</h3>
+            </div>
+            <div class="form">
+                <h2>Let's do this!</h2>
+                <form action="" method="post">
+
+                    <div class="col">
+                        <div class="entry">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" id="first_name" />
+                        </div>
+                        <div class="entry">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" id="last_name" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="entry">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" />
+                        </div>
+                        <div class="entry">
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="number" id="phone_number" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="entry">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" />
+                        </div>
+                        <div class="entry">
+                            <label for="conf_password">CONFIRM PASSWORD</label>
+                            <input type="password" id="conf_password" />
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <p id="error"></p>
+            <div class="signup">
+                <button onclick="createAccount()">Create Account</button>
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
