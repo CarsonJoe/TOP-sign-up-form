@@ -23,7 +23,6 @@ body {
 
 .container {
     height:100vh;
-    max-width: 1100px;
     display: flex;
     
 }
@@ -68,7 +67,7 @@ svg{
 
 .form {
     background-color: #fff;
-    box-shadow: 0 2px 5px -4px #000;
+    box-shadow: 2px 2px 5px -4px #444;
     display: flex;
     flex-direction: column;
 }
