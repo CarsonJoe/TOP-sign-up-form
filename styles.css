@@ -35,6 +35,7 @@ body {
     justify-content: center;
     flex-direction: column;
     color: white;
+    min-width: 300px;
 }
 
 .right-container {
@@ -93,8 +94,9 @@ form {
 
 .col {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    gap: 50px;
+    column-gap: 50px;
 }
 .entry {
     font-size: smaller;
@@ -151,3 +153,8 @@ button:hover {
     position:relative;
 }
 
+@media (max-width: 550px) {
+    .img-container{
+        display: none;
+    }
+}
